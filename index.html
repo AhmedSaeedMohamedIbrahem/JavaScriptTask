@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript input text box adding number</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    function AddingNumberFunction()
+    {
+       var FirstVar = parseInt(document.getElementById("FirstValue").value);
+       var SecondVar = parseInt(document.getElementById("SecondValue").value);
+       if (isNaN(FirstVar) || isNaN(SecondVar)) 
+       {
+        alert("The value must be a number");
+       }
+ 
+       var resultVar = FirstVar + SecondVar; 
+       document.getElementById("Result").value = resultVar;
+       console.log(resultVar)
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="container">
+<h1>JavaScript input text box adding number!</h1>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="form-group">
+  <input type="text" class="form-control" id="FirstValue" name="FirstValueText" placeholder="First Value" />
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="form-group">
+  <input type="text" class="form-control"  id="SecondValue" name="SecondValueText" placeholder="Second Value"/>
+</div>
+  </div>
+</div> 
+<div class="row">
+  <div class="col-lg-12">
+<input type="button" class="btn btn-primary" value="Calc" onClick="AddingNumberFunction();" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-group">
+    <div class="input-group">
+    <span class="input-group-addon">Result</span>
+    <input id="Result" type="text" class="form-control" name="ResultText" placeholder="=">
+</div>
+    </div>
+  </div>
+</div>
+<div class="alert alert-warning">
+  <strong>Warning!</strong> Please use only numbers.
+</div>
+  </div>
+
+</body>
+
+
+</html>
